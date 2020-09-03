@@ -1,20 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-row class="rank">
+    <ion-col>
+      <ion-row class="number" (click)="goToFlowersPage('A')"></ion-row>
+      <ion-row class="number" (click)="goToFlowersPage('2')"></ion-row>
+      <ion-row class="number" (click)="goToFlowersPage('3')"></ion-row>
+      <ion-row class="number" (click)="goToFlowersPage('4')"></ion-row>
+      <ion-row class="number" (click)="goToFlowersPage('5')"></ion-row>
+    </ion-col>
+    <ion-col>
+        <ion-row class="number" (click)="goToFlowersPage('6')"></ion-row>
+        <ion-row class="number" (click)="goToFlowersPage('7')"></ion-row>
+        <ion-row class="number" (click)="goToFlowersPage('8')"></ion-row>
+        <ion-row class="number" (click)="goToFlowersPage('9')"></ion-row>
+        <ion-row class="number" (click)="goToFlowersPage('10')"></ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row class="letter" (click)="goToFlowersPage('J')"></ion-row>
+      <ion-row class="letter" (click)="goToFlowersPage('Q')"></ion-row>
+      <ion-row class="letter" (click)="goToFlowersPage('K')"></ion-row>
+    </ion-col>
+  </ion-row>
 </ion-content>

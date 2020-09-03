@@ -1,0 +1,14 @@
+ion-row {
+    height: 50%;
+    background-image: url('../../assets/scratchcard.jpg');
+    background-size: cover;
+}
+
+ion-col {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    // color: white;
+    // border: 1px solid white;
+}

@@ -1,7 +1,8 @@
 {
   "name": "dineshTheMagician",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
