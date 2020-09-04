@@ -13,22 +13,18 @@ export class ThanksPage implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.router.navigate(['/home']);
-    }, 5000);
+    // setTimeout(() => {
+    //   this.router.navigate(['/home']);
+    // }, 5000);
   }
 
   tapEvent() {
-    console.log("Work")
     this.count++;
     setTimeout(() => {
-      console.log("Work1")
-
       if (this.count == 1) {
         this.count = 0;
-      } if (this.count > 1) {
-        console.log("Work2")
-
+      }
+      if (this.count > 1) {
         this.count = 0;
         this.router.navigate(['/home']);
       }

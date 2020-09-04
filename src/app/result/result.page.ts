@@ -45,7 +45,6 @@ export class ResultPage implements OnInit {
       callback: () => {
         console.log('Now the window will reload !')
         setTimeout(()=> {
-        console.log('Now the window will reload fhhfhfghfghnfgnfghn!')
         this.router.navigate(['/thanks']);
           // this.router.navigate(['/thanks']);
         }, 2000)
