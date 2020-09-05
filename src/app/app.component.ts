@@ -70,8 +70,8 @@ export class AppComponent {
       message: 'Do you want to close the app?',
       backdropDismiss: false,
       buttons: [{
-        text: 'Yes',
-        role: 'No',
+        text: 'No',
+        role: 'cancel',
         handler: () => {
           console.log('Application exit prevented!');
         }

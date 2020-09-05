@@ -30,7 +30,7 @@
     // max-width: 300px;
     width:100%;
     height: 100%;
-    height: 300px;
+    // height: 300px;
     margin: auto;
     position: relative;
     canvas{
@@ -57,10 +57,10 @@
         }
     }
     .sc__inner{
-        background-color: #ffffff;
-        width: 360px;
-        height: 640px;
-        border-radius: 5px;
-        border: 1px solid #26005f;
+        // background-color: #ffffff;
+        width: 100%;
+        height: 100%;
+        // border-radius: 5px;
+        // border: 1px solid #26005f;
     }
 }

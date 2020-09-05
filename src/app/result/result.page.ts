@@ -20,7 +20,6 @@ export class ResultPage implements OnInit {
       if (this.router.getCurrentNavigation().extras.state) {
         this.card = this.router.getCurrentNavigation().extras.state.card;
       }
-
     });
   }
 
@@ -29,25 +28,29 @@ export class ResultPage implements OnInit {
   }
 
   createNewScratchCard() {
+    let width = screen.width;
+    let height = screen.height;
     this.path = '<img width="100%" height="100%" src="./assets/cards/' + this.card + '.jpg">';
     console.log("Card design", this.card, this.path);
     const scContainer = document.getElementById('js--sc--container')
     var sc = new ScratchCard('#js--sc--container', {
       scratchType: SCRATCH_TYPE.CIRCLE,
-      containerWidth: 360,//scContainer.offsetWidth,
-      containerHeight: 640,
+      containerWidth: width + 50,//scContainer.offsetWidth,
+      containerHeight: height + 50,
+      width: 10,
+      // height: 10,
+      // brushSrc: './assets/brush.png',
       imageForwardSrc: './assets/scratchcard.jpg',
       //imageBackgroundSrc: './assets/images/scratchcard-background.svg',
       htmlBackground: this.path,
-      clearZoneRadius: 40,
+      clearZoneRadius: 60,
       // nPoints: 30,
       // pointSize: 4,
       callback: () => {
         console.log('Now the window will reload !')
-        setTimeout(()=> {
-        this.router.navigate(['/thanks']);
-          // this.router.navigate(['/thanks']);
-        }, 2000)
+        setTimeout(() => {
+          this.router.navigate(['/thanks']);
+        }, 3000)
       }
     })
     // Init
