@@ -35,7 +35,9 @@ export class ResultPage implements OnInit {
     const scContainer = document.getElementById('js--sc--container')
     var sc = new ScratchCard('#js--sc--container', {
       scratchType: SCRATCH_TYPE.CIRCLE,
-      containerWidth: width + 50,//scContainer.offsetWidth,
+      // containerWidth: width + 50,
+      // containerHeight: height + 50,
+      containerWidth: 500,
       containerHeight: height + 50,
       width: 10,
       // height: 10,
@@ -57,15 +59,4 @@ export class ResultPage implements OnInit {
     sc.init();
   }
 
-  tapEvent() {
-    this.count++;
-    setTimeout(() => {
-      if (this.count == 1) {
-        this.count = 0;
-      } if (this.count > 1) {
-        this.count = 0;
-        this.router.navigate(['/home']);
-      }
-    }, 250);
-  }
 }

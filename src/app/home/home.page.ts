@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
+import { Insomnia } from '@ionic-native/insomnia/ngx';
 
 
 @Component({
@@ -11,7 +12,19 @@ export class HomePage {
 
   card;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private insomnia: Insomnia) {
+    // this.insomnia.keepAwake()
+    //   .then(
+    //     () => console.log('success'),
+    //     () => console.log('error')
+    //   );
+
+    this.insomnia.allowSleepAgain()
+      .then(
+        () => console.log('success'),
+        () => console.log('error')
+      );
+  }
 
   touchstart(event) {
     console.log("Start", event.srcElement.innerHTML);
@@ -22,24 +35,24 @@ export class HomePage {
     console.log("Events", event);
     let screenX = event.changedTouches[0].pageX;
     let screenY = event.changedTouches[0].pageY;
-    console.log("width", screen.width, "height", screen.height, "screenX", screenX, "x", "screenY", screenY, screenX /screen.width, "y", screenY / screen.height)
+    console.log("width", screen.width, "height", screen.height, "screenX", screenX, "x", "screenY", screenY, screenX / screen.width, "y", screenY / screen.height)
 
 
     if (screenX / screen.width < 0.5 && screenY / screen.height < 0.5) {
       console.log("S");
-      this.card+='S';
+      this.card += 'S';
     }
     else if (screenX / screen.width > 0.5 && screenY / screen.height < 0.5) {
       console.log("H");
-      this.card+='H';
+      this.card += 'H';
     }
     else if (screenX / screen.width < 0.5 && screenY / screen.height > 0.5) {
       console.log("D");
-      this.card+='D';
+      this.card += 'D';
     }
     else {
       console.log("C");
-      this.card+='C';
+      this.card += 'C';
     }
 
     let navigationExtras: NavigationExtras = {

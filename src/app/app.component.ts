@@ -28,11 +28,17 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.statusBar.overlaysWebView(true);
+      if (window.statusbar) {
+        this.statusBar.hide();
+      }
+      // this.statusBar.styleDefault();
+      this.splashScreen.hide();
     });
 
-    this.platform.resume.subscribe(async () => {
-      this.router.navigate(['/home']);
-    });
+    // this.platform.resume.subscribe(async () => {
+    //   this.router.navigate(['/home']);
+    // });
 
     this.platform.backButton.subscribeWithPriority(10, (processNextHandler) => {
       console.log('Back press handler!');
@@ -47,21 +53,19 @@ export class AppComponent {
         // Navigate to back page
         console.log('Navigate to back page');
         this._location.back();
-
       }
-
     });
 
-    this.platform.backButton.subscribeWithPriority(5, () => {
-      console.log('Handler called to force close!');
-      this.alertController.getTop().then(r => {
-        if (r) {
-          navigator['app'].exitApp();
-        }
-      }).catch(e => {
-        console.log(e);
-      })
-    });
+    // this.platform.backButton.subscribeWithPriority(5, () => {
+    //   console.log('Handler called to force close!');
+    //   this.alertController.getTop().then(r => {
+    //     if (r) {
+    //       navigator['app'].exitApp();
+    //     }
+    //   }).catch(e => {
+    //     console.log(e);
+    //   })
+    // });
   }
 
   showExitConfirm() {
