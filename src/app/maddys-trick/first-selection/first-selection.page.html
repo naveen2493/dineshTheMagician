@@ -1,0 +1,99 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>madis-trick</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-row>
+    <ion-col class="flip-card" (click)="selectCard('2S')">
+      <div id="2S" class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="./assets/cards/2S.jpg" alt="Avatar">
+        </div>
+        <div class="flip-card-back">
+          <img src="./assets/thanks.jpg" alt="Avatar">
+        </div>
+      </div>
+    </ion-col>
+    <ion-col class="flip-card" (click)="selectCard('3S')">
+      <div id="3S" class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="./assets/cards/3S.jpg" alt="Avatar">
+        </div>
+        <div class="flip-card-back">
+          <img src="./assets/thanks.jpg" alt="Avatar">
+        </div>
+      </div>
+    </ion-col>
+    <ion-col class="flip-card" (click)="selectCard('4S')">
+      <div id="4S" class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="./assets/cards/4S.jpg" alt="Avatar">
+        </div>
+        <div class="flip-card-back">
+          <img src="./assets/thanks.jpg" alt="Avatar">
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="flip-card" (click)="selectCard('5S')">
+      <div id="5S" class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="./assets/cards/5S.jpg" alt="Avatar">
+        </div>
+        <div class="flip-card-back">
+          <img src="./assets/thanks.jpg" alt="Avatar">
+        </div>
+      </div>
+    </ion-col>
+    <ion-col class="flip-card" (click)="selectCard('6S')">
+      <div id="6S" class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="./assets/cards/6S.jpg" alt="Avatar">
+        </div>
+        <div class="flip-card-back">
+          <img src="./assets/thanks.jpg" alt="Avatar">
+        </div>
+      </div>
+    </ion-col>
+    <ion-col class="flip-card" (click)="selectCard('7S')">
+      <div id="7S" class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="./assets/cards/7S.jpg" alt="Avatar">
+        </div>
+        <div class="flip-card-back">
+          <img src="./assets/thanks.jpg" alt="Avatar">
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="flip-card" (click)="selectCard('8S')">
+      <div id="8S" class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="./assets/cards/8S.jpg" alt="Avatar">
+        </div>
+        <div class="flip-card-back">
+          <img src="./assets/thanks.jpg" alt="Avatar">
+        </div>
+      </div>
+    </ion-col>
+    <ion-col class="flip-card" (click)="selectCard('9S')">
+      <div id="9S" class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="./assets/cards/9S.jpg" alt="Avatar">
+        </div>
+        <div class="flip-card-back">
+          <img src="./assets/thanks.jpg" alt="Avatar">
+        </div>
+      </div>
+    </ion-col>
+    <ion-col class="next-col">
+      <div (click)="goToSecondSelect()" *ngIf="selectedCards.length === 4" class="next">
+        Next
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

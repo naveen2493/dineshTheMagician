@@ -23,6 +23,15 @@ const routes: Routes = [
     path: 'thanks',
     loadChildren: () => import('./thanks/thanks.module').then( m => m.ThanksPageModule)
   },
+  {
+    path: 'scratch-card',
+    loadChildren: () => import('./scratch-card/scratch-card.module').then( m => m.ScratchCardPageModule)
+  },
+  {
+    path: 'maddys-trick',
+    loadChildren: () => import('./maddys-trick/maddys-trick.module').then( m => m.MadisTrickPageModule)
+  },
+
 ];
 
 @NgModule({

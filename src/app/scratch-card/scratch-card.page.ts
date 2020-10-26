@@ -4,20 +4,16 @@ import { Insomnia } from '@ionic-native/insomnia/ngx';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-scratch-card',
+  templateUrl: './scratch-card.page.html',
+  styleUrls: ['./scratch-card.page.scss'],
 })
-export class HomePage {
+export class ScratchCardPage {
 
   card;
 
   constructor(private router: Router) {
-    // this.insomnia.keepAwake()
-    //   .then(
-    //     () => console.log('success'),
-    //     () => console.log('error')
-    //   );
+
   }
 
   touchstart(event) {
@@ -57,8 +53,5 @@ export class HomePage {
     this.router.navigate(['/result'], navigationExtras);
   }
 
-  goToPage(page) {
-    this.router.navigate([page]);
-  }
-
 }
+

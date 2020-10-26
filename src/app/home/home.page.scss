@@ -1,24 +1,44 @@
-.rank{
-  height: 100%;
-  background-image: url('../../assets/scratchcard.jpg');
-  background-size: cover;
-  // border: 1px solid white;
-}
-
-.number {
-  width: 100%;
-  height: 20%;
-}
-
-.letter {
-  width: 100%;
-  height: 33.3%;
-}
-
-// ion-col {
-//   border: 1px solid white;
+// .rank{
+//   height: 100%;
+//   background-image: url('../../assets/scratchcard.jpg');
+//   background-size: cover;
+//   // border: 1px solid white;
 // }
 
-.number, .letter{
-  // color: white;
+// .number {
+//   width: 100%;
+//   height: 20%;
+// }
+
+// .letter {
+//   width: 100%;
+//   height: 33.3%;
+// }
+
+// // ion-col {
+// //   border: 1px solid white;
+// // }
+
+// .number, .letter{
+//   // color: white;
+// }
+
+.tricks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+ion-button {
+  width: 80%;
+  margin-top: 1rem;
+  font-weight: bold;
 }
